@@ -3,6 +3,8 @@
 
 The **Python Downloads Janitor** is a lightweight, efficient automation script designed to triage and organize chaotic directories. Originally built to handle a "Downloads" folder that had accumulated 184+ files over several months, this tool applies the SOC (Security Operations Center) mindset of **Visibility and Order** to personal file management.
 
+Note: While I originally built this tool to solve my own chaos on *Ubuntu*, I believe a tool is only truly "cool" if everyone can use it. I have since updated the logic to be fully cross-platform, supporting **Windows, Linux, and macOS**.
+
 ---
 
 ## The Problem
@@ -17,7 +19,7 @@ As a Cybersecurity student, my workspace moves fast. Between packet captures, re
 ## How It Works
 The script utilizes the Python Standard Library to perform a "Search and Triage" operation:
 
-1. **`os` Library:** Interacts with the Operating System to inventory every file in the target directory.
+1. **`Pathlib` Library:** Modern, object-oriented path handling that automatically detects your OS (Windows \ vs Linux /).
 2. **`shutil` Library:** Provides the "muscle" to move files securely across the file system.
 3. **Normalization:** Uses .lower() to ensure file extensions are identified regardless of case-sensitivity—a key practice in identifying obfuscated files.
 4. **Self-Healing Logic:** The script checks if destination folders (Documents, Images, Scripts, Archives) exist. If they don't, it creates them on the fly before moving data.
@@ -52,7 +54,7 @@ cd python-downloads-janitor
 ```
 
 3. Run the script:
-(The script uses os.path.expanduser to automatically find your Downloads folder on any Linux, Mac or Windows system).
+(The script uses Path.home() to automatically find your profile on any Linux, Mac, or Windows system)
 ```bash
 python3 organize_downloads.py
 ```
@@ -71,8 +73,8 @@ I wrote a detailed technical walkthrough on Medium about the "breaking point" th
 👉 [Read the Medium Article Here](https://medium.com/@obiomauzoh16/the-184-file-breaking-point-how-i-used-python-to-cure-my-chronic-downloads-chaos-8f4d2f19e5b6)
 
 ## Connect with the Architect
-LinkedIn: [Obioma Felicity Uzoh](www.linkedin.com/in/felicityuzoh)
-Portfolio: [TechOunik](https://techounik.github.io/techounik/)
+* LinkedIn: [Obioma Felicity Uzoh](www.linkedin.com/in/felicityuzoh)
+* Portfolio: [TechOunik](https://techounik.github.io/techounik/)
 
 ```Created with resilience and a love for clean code by Obioma - Final Year Cybersecurity Student.```
 
