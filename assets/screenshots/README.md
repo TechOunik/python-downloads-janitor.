@@ -1,4 +1,4 @@
-### ⚡ The Janitor in Action
+# ⚡ The Janitor in Action
 Here is the real-time execution of the Python Downloads Janitor. No manual sorting, just pure Python efficiency.
 
 #### **Step 1: Initiating the Triage**
