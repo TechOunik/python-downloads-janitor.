@@ -52,7 +52,7 @@ cd python-downloads-janitor
 ```
 
 3. Run the script:
-(The script uses os.path.expanduser to automatically find your Downloads folder on any Linux/Mac system).
+(The script uses os.path.expanduser to automatically find your Downloads folder on any Linux, Mac or Windows system).
 ```bash
 python3 organize_downloads.py
 ```
